@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word List</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        }
+
+        .head {
+            margin: 6px;
+        }
+
+        .head:after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+
+        .head .item {
+            width: 20%;
+            margin: 10px 8px;
+            display: inline-block;
+            float: left;
+            height: 100px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .head .item:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+        }
+
+        .head .item .title {
+            padding: 8px 12px 4px 8px;
+            height: 40%;
+            overflow: hidden;
+            color: white;
+        }
+
+        .head .item .value {
+            padding: 0 12px;
+            height: 60%;
+            font-size: 28px;
+            color: white;
+        }
+
+        .head .num_passed, .head .num_total {
+            background: linear-gradient(to top, #00efca, #02ccfc);
+        }
+
+        .head .used_minutes {
+            background: linear-gradient(to top, #f799d1, #ffcd4d);
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 #EFF7FA;
+        }
+
+        .table th, .table td {
+            padding: 8px;
+            border-bottom: 1px solid #E0EEF9;
+        }
+        
+        .table tr:hover {
+            -webkit-box-shadow: 0 0 6px rgb(208, 234, 255);
+            -moz-box-shadow: 0 0 6px rgb(208, 234, 255);
+            box-shadow: 0 0 6px rgb(208, 234, 255);
+        }
+
+        .table .table-head {
+            background-color: #F9FDFF;
+            color: #616161;
+            text-align: left;
+        }
+
+        .table tr:nth-child(odd) {
+            background-color: #F9FDFF;
+        }
+    </style>
+</head>
+<body>
+<div class="head">
+    <div class="item num_passed">
+        <div class="title">今日学习</div>
+        <div class="value">500</div>
+    </div>
+    <div class="item num_total">
+        <div class="title">单词总数</div>
+        <div class="value">722</div>
+    </div>
+    <div class="item used_minutes">
+        <div class="title">用时</div>
+        <div class="value">46</div>
+    </div>
+</div>
+
+<div style="margin: 20px 40px">
+    <table class="table">
+        <tr class="table-head">
+            <th>单词</th>
+            <th>音标</th>
+            <th>中文释义</th>
+            <th>发音</th>
+            <th>口</th>
+        </tr>
+                <tr>
+            <td>absorb</td>
+            <td>əb'sɔːrb</td>
+            <td> v. 吸收,吸引...的注意,使全神贯注</td>
+            <td>http://media.shanbay.com/audio/us/absorb.mp3</td>
+            <td>əb'sɔːrb</td>
+        </tr>
+                <tr>
+            <td>adequate</td>
+            <td>'ædɪkwət</td>
+            <td> adj. 足够的, 充足的, 适当的, 能胜任的</td>
+            <td>http://media.shanbay.com/audio/us/adequate.mp3</td>
+            <td>'ædɪkwət</td>
+        </tr>
+                <tr>
+            <td>classical</td>
+            <td>'klæsɪkl</td>
+            <td> adj. 古典的, 典雅的, 经典的</td>
+            <td>http://media.shanbay.com/audio/us/classical.mp3</td>
+            <td>'klæsɪkl</td>
+        </tr>
+                <tr>
+            <td>contest</td>
+            <td>'kɑːntest</td>
+            <td> n. 竞赛,比赛
+vt. 竞赛,争取
+vi. 奋斗</td>
+            <td>http://media.shanbay.com/audio/us/contest.mp3</td>
+            <td>'kɑːntest</td>
+        </tr>
+                <tr>
+            <td>pump</td>
+            <td>pʌmp</td>
+            <td> n. 抽水机, 打气筒, 心脏, 抽水, 轻软舞鞋
+vt. 抽水, 打气, 用泵输送, 盘问, 涌出
+vi. 用泵抽水, 快速上下(或内外)运动</td>
+            <td>http://media.shanbay.com/audio/us/pump.mp3</td>
+            <td>pʌmp</td>
+        </tr>
+                <tr>
+            <td>romantic</td>
+            <td>roʊ'mæntɪk</td>
+            <td> adj. 浪漫的
+n. 浪漫的人</td>
+            <td>http://media.shanbay.com/audio/us/romantic.mp3</td>
+            <td>roʊ'mæntɪk</td>
+        </tr>
+                <tr>
+            <td>rub</td>
+            <td>rʌb</td>
+            <td> n. 摩擦,困难,障碍
+vt. 擦, 搓, 涂抹上, 使不愉快
+vi. 摩擦</td>
+            <td>http://media.shanbay.com/audio/us/rub.mp3</td>
+            <td>rʌb</td>
+        </tr>
+                <tr>
+            <td>trap</td>
+            <td>træp</td>
+            <td> n. 圈套,陷阱,困境,双轮轻便马车 
+vt. &vi. 设圈套,设陷阱</td>
+            <td>http://media.shanbay.com/audio/us/trap.mp3</td>
+            <td>træp</td>
+        </tr>
+                <tr>
+            <td>trunk</td>
+            <td>trʌŋk</td>
+            <td> n. 树干,躯干, 干线, (汽车后部)行李箱,象鼻</td>
+            <td>http://media.shanbay.com/audio/us/trunk.mp3</td>
+            <td>trʌŋk</td>
+        </tr>
+                <tr>
+            <td>niche</td>
+            <td>niːʃ</td>
+            <td> n. 壁龛；合适的职业；商机，有利可图的市场(或形势等)；
+vt. 放入壁龛</td>
+            <td>http://media.shanbay.com/audio/us/niche.mp3</td>
+            <td>niːʃ</td>
+        </tr>
+                <tr>
+            <td>artistic</td>
+            <td>ɑːr'tɪstɪk</td>
+            <td> adj. 艺术的</td>
+            <td>http://media.shanbay.com/audio/us/artistic.mp3</td>
+            <td>ɑːr'tɪstɪk</td>
+        </tr>
+                <tr>
+            <td>corn</td>
+            <td>kɔːrn</td>
+            <td> n. 谷物,谷粒,陈词滥调,鸡眼
+vt. 使成颗粒状,用盐水腌制,用谷物喂
+vi. 变成颗粒</td>
+            <td>http://media.shanbay.com/audio/us/corn.mp3</td>
+            <td>kɔːrn</td>
+        </tr>
+                <tr>
+            <td>laboratory</td>
+            <td>'læbrətɔːri</td>
+            <td> n. 实验室, 实验大楼</td>
+            <td>http://media.shanbay.com/audio/us/laboratory.mp3</td>
+            <td>'læbrətɔːri</td>
+        </tr>
+                <tr>
+            <td>precise</td>
+            <td>prɪ'saɪs</td>
+            <td> adj. 精确的,准确的,认真的</td>
+            <td>http://media.shanbay.com/audio/us/precise.mp3</td>
+            <td>prɪ'saɪs</td>
+        </tr>
+                <tr>
+            <td>variation</td>
+            <td>ˌveri'eɪʃn</td>
+            <td> n. 变化,变动,变种,变奏曲</td>
+            <td>http://media.shanbay.com/audio/us/variation.mp3</td>
+            <td>ˌveri'eɪʃn</td>
+        </tr>
+                <tr>
+            <td>venture</td>
+            <td>'ventʃər</td>
+            <td> n. 冒险,风险,投机
+vt. 敢尝试,谨慎地做，冒险一试
+vi. 冒险做</td>
+            <td>http://media.shanbay.com/audio/us/venture.mp3</td>
+            <td>'ventʃər</td>
+        </tr>
+                <tr>
+            <td>vital</td>
+            <td>'vaɪtl</td>
+            <td> adj. 至关重要的, 生死攸关的, 有活力的, 充满生机的</td>
+            <td>http://media.shanbay.com/audio/us/vital.mp3</td>
+            <td>'vaɪtl</td>
+        </tr>
+                <tr>
+            <td>wisdom</td>
+            <td>'wɪzdəm</td>
+            <td> n. 智慧,学问</td>
+            <td>http://media.shanbay.com/audio/us/wisdom.mp3</td>
+            <td>'wɪzdəm</td>
+        </tr>
+                <tr>
+            <td>erratic</td>
+            <td>ɪ'rætɪk</td>
+            <td> adj.飘忽不定的； 行为古怪，反复无常； （运动或行为）不规则的</td>
+            <td>http://media.shanbay.com/audio/us/erratic.mp3</td>
+            <td>ɪ'rætɪk</td>
+        </tr>
+                <tr>
+            <td>spanner</td>
+            <td>'spænər</td>
+            <td> n. 扳手</td>
+            <td>http://media.shanbay.com/audio/us/spanner.mp3</td>
+            <td>'spænər</td>
+        </tr>
+                <tr>
+            <td>consume</td>
+            <td>kən'suːm</td>
+            <td> vt.  消耗，毁灭，吃，喝, 挥霍
+vi. 耗尽生命, 被烧毁</td>
+            <td>http://media.shanbay.com/audio/us/consume.mp3</td>
+            <td>kən'suːm</td>
+        </tr>
+                <tr>
+            <td>blast</td>
+            <td>blæst</td>
+            <td> n. 爆破,冲击波,气流,一阵,汽笛声
+vi. 爆破,突然发出声音
+vt. 喷射,炸掉</td>
+            <td>http://media.shanbay.com/audio/us/blast.mp3</td>
+            <td>blæst</td>
+        </tr>
+                <tr>
+            <td>crack</td>
+            <td>kræk</td>
+            <td> vt.破裂，打开； （使…）开裂； 说（笑话）； 开瓶
+vi.断裂，折断； 碎裂声，爆裂声； 镜子破裂了； 失去控制，衰退
+n.裂缝； 试图； 缝隙； （可听到响声的）重击
+adj.训练有素的； 技艺高超的； 优秀的； 一流的</td>
+            <td>http://media.shanbay.com/audio/us/crack.mp3</td>
+            <td>kræk</td>
+        </tr>
+                <tr>
+            <td>downstairs</td>
+            <td>ˌdaʊn'sterz</td>
+            <td> adj. 楼下的
+adv. 在楼下
+n. 楼下</td>
+            <td>http://media.shanbay.com/audio/us/downstairs.mp3</td>
+            <td>ˌdaʊn'sterz</td>
+        </tr>
+                <tr>
+            <td>heading</td>
+            <td>'hedɪŋ</td>
+            <td> n. 标题，题目，航向
+动词head的现在分词</td>
+            <td>http://media.shanbay.com/audio/us/heading.mp3</td>
+            <td>'hedɪŋ</td>
+        </tr>
+                <tr>
+            <td>mainly</td>
+            <td>'meɪnli</td>
+            <td> adv. 主要地</td>
+            <td>http://media.shanbay.com/audio/us/mainly.mp3</td>
+            <td>'meɪnli</td>
+        </tr>
+                <tr>
+            <td>slice</td>
+            <td>slaɪs</td>
+            <td> n. 薄的切片,一部份,锅铲
+vt. 切成薄片,大幅降低</td>
+            <td>http://media.shanbay.com/audio/us/slice.mp3</td>
+            <td>slaɪs</td>
+        </tr>
+                <tr>
+            <td>turkey</td>
+            <td>'tɜːrki</td>
+            <td> n. (Turkey)土耳其,火鸡,笨蛋,失败之作</td>
+            <td>http://media.shanbay.com/audio/us/turkey.mp3</td>
+            <td>'tɜːrki</td>
+        </tr>
+                <tr>
+            <td>wherever</td>
+            <td>wer'evər</td>
+            <td> adv. 无论什么地方，在......的各个地方
+conj. 无论在哪里</td>
+            <td>http://media.shanbay.com/audio/us/wherever.mp3</td>
+            <td>wer'evər</td>
+        </tr>
+                <tr>
+            <td>hostage</td>
+            <td>'hɑːstɪdʒ</td>
+            <td> n. 人质</td>
+            <td>http://media.shanbay.com/audio/us/hostage.mp3</td>
+            <td>'hɑːstɪdʒ</td>
+        </tr>
+                <tr>
+            <td>aim</td>
+            <td>eɪm</td>
+            <td> n. 目标,对准, 枪法
+vt. 瞄准, 针对
+vi. 旨在, 瞄准, 打算</td>
+            <td>http://media.shanbay.com/audio/us/aim.mp3</td>
+            <td>eɪm</td>
+        </tr>
+                <tr>
+            <td>bend</td>
+            <td>bend</td>
+            <td> v. 弯曲, 屈服
+n. 弯曲(物), 弯道</td>
+            <td>http://media.shanbay.com/audio/us/bend.mp3</td>
+            <td>bend</td>
+        </tr>
+                <tr>
+            <td>rope</td>
+            <td>roʊp</td>
+            <td> n. 绳，绳索
+vt. 捆，绑
+vi. 拧成绳状</td>
+            <td>http://media.shanbay.com/audio/us/rope.mp3</td>
+            <td>roʊp</td>
+        </tr>
+                <tr>
+            <td>suburb</td>
+            <td>'sʌbɜːrb</td>
+            <td> n. 郊区</td>
+            <td>http://media.shanbay.com/audio/us/suburb.mp3</td>
+            <td>'sʌbɜːrb</td>
+        </tr>
+                <tr>
+            <td>confess</td>
+            <td>kən'fes</td>
+            <td> v. 承认, 告白, 忏悔</td>
+            <td>http://media.shanbay.com/audio/us/confess.mp3</td>
+            <td>kən'fes</td>
+        </tr>
+                <tr>
+            <td>enforce</td>
+            <td>ɪn'fɔːrs</td>
+            <td> vt. 加强, 强迫, 执行</td>
+            <td>http://media.shanbay.com/audio/us/enforce.mp3</td>
+            <td>ɪn'fɔːrs</td>
+        </tr>
+                <tr>
+            <td>evident</td>
+            <td>'evɪdənt</td>
+            <td> adj. 明显的, 明白的</td>
+            <td>http://media.shanbay.com/audio/us/evident.mp3</td>
+            <td>'evɪdənt</td>
+        </tr>
+                <tr>
+            <td>evil</td>
+            <td>'iːvl</td>
+            <td> adj. 邪恶的, 坏的
+n. 邪恶, 罪恶</td>
+            <td>http://media.shanbay.com/audio/us/evil.mp3</td>
+            <td>'iːvl</td>
+        </tr>
+                <tr>
+            <td>noon</td>
+            <td>nuːn</td>
+            <td> n. 正午, 中午，全盛期，顶点</td>
+            <td>http://media.shanbay.com/audio/us/noon.mp3</td>
+            <td>nuːn</td>
+        </tr>
+                <tr>
+            <td>interim</td>
+            <td>'ɪntərɪm</td>
+            <td> adj. 中间的,暂时的,临时的
+n. 中间时期,过渡时期,暂定</td>
+            <td>http://media.shanbay.com/audio/us/interim.mp3</td>
+            <td>'ɪntərɪm</td>
+        </tr>
+            </table>
+</div>
+</body>
+</html>

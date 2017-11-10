@@ -5,6 +5,7 @@
 import requests
 import os
 from jinja2 import Environment, FileSystemLoader
+from datetime import datetime
 
 today = 'https://www.shanbay.com/api/v1/bdc/stats/today'
 word_base_url = 'https://www.shanbay.com/api/v1/bdc/library/today/?page='
@@ -67,8 +68,8 @@ def main():
                             'audio': w['audio']}
                     word_list.append(word)
     result['words'] = word_list
-
-    j2_env.get_template('wordList.html').stream(result).dump('wordList.html')
+    html = 'result/html/words_%s.html' % (datetime.today().strftime('%Y_%m_%d'))
+    j2_env.get_template('wordList.html').stream(result).dump(html)
 
 
 if __name__ == '__main__':
