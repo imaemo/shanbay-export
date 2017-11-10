@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word List</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        }
+
+        .head {
+            margin: 6px;
+        }
+
+        .head:after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+
+        .head .item {
+            width: 20%;
+            margin: 10px 8px;
+            display: inline-block;
+            float: left;
+            height: 100px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .head .item:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+        }
+
+        .head .item .title {
+            padding: 8px 12px 4px 8px;
+            height: 40%;
+            overflow: hidden;
+            color: white;
+        }
+
+        .head .item .value {
+            padding: 0 12px;
+            height: 60%;
+            font-size: 28px;
+            color: white;
+        }
+
+        .head .num_passed, .head .num_total {
+            background: linear-gradient(to top, #00efca, #02ccfc);
+        }
+
+        .head .used_minutes {
+            background: linear-gradient(to top, #f799d1, #ffcd4d);
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 #EFF7FA;
+        }
+
+        .table th, .table td {
+            padding: 8px;
+            border-bottom: 1px solid #E0EEF9;
+        }
+        
+        .table tr:hover {
+            -webkit-box-shadow: 0 0 6px rgb(208, 234, 255);
+            -moz-box-shadow: 0 0 6px rgb(208, 234, 255);
+            box-shadow: 0 0 6px rgb(208, 234, 255);
+        }
+
+        .table .table-head {
+            background-color: #F9FDFF;
+            color: #616161;
+            text-align: left;
+        }
+
+        .table tr:nth-child(odd) {
+            background-color: #F9FDFF;
+        }
+    </style>
+</head>
+<body>
+<div class="head">
+    <div class="item num_passed">
+        <div class="title">今日学习</div>
+        <div class="value">{{ num_passed }}</div>
+    </div>
+    <div class="item num_total">
+        <div class="title">单词总数</div>
+        <div class="value">{{ num_total }}</div>
+    </div>
+    <div class="item used_minutes">
+        <div class="title">用时</div>
+        <div class="value">{{ used_minutes }}</div>
+    </div>
+</div>
+
+<div style="margin: 20px 40px">
+    <table class="table">
+        <tr class="table-head">
+            <th>单词</th>
+            <th>音标</th>
+            <th>中文释义</th>
+            <th>发音</th>
+            <th>口</th>
+        </tr>
+        {% for word in words %}
+        <tr>
+            <td>{{ word.content}}</td>
+            <td>{{ word.pron}}</td>
+            <td>{{ word.definition}}</td>
+            <td>{{ word.audio}}</td>
+            <td>{{ word.pron}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>
