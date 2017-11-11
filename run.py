@@ -55,8 +55,8 @@ def main():
             word_list.append(word)
         total_page = __data['data']['total'] / __data['data']['ipp']
         for curr_page in range(2, total_page + 1):
-            if curr_page == 5:
-                break
+            # if curr_page == 5:
+            #     break
             word_url = word_base_url + str(curr_page)
             r = s.get(word_url, headers=headers)
             if r.status_code != 200:
